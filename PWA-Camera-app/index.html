@@ -40,89 +40,88 @@
 <body>
 
  <!-- Uses a header that contracts as the page scrolls down. -->
-    <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
-      <header class="mdl-layout__header mdl-layout__header--waterfall">
-        <!-- Top row, always visible -->
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <span class="mdl-layout-title">Title</span>
-          <div class="mdl-layout-spacer"></div>
+  <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <!-- Top row, always visible -->
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Title</span>
+        <div class="mdl-layout-spacer"></div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                      mdl-textfield--floating-label mdl-textfield--align-right">
+                    mdl-textfield--floating-label mdl-textfield--align-right">
             <label class="mdl-button mdl-js-button mdl-button--icon"
                    for="waterfall-exp">
               <i class="material-icons">search</i>
             </label>
             <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" name="sample"
-                     id="waterfall-exp">
+              <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
             </div>
           </div>
-        </div>
-        <!-- Bottom row, not visible on scroll -->
-        <div class="mdl-layout__header-row">
-          <div class="mdl-layout-spacer"></div>
-          <!-- Navigation -->
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="camera.html">Camera Quick Link</a>
-          </nav>
-        </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
+      </div>
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="camera.html">Camera Quick Link</a>
+      </nav>
+    </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="">Photobooth</a>
         </nav>
-      </div>
-      <main class="mdl-layout__content">
- <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Material Design Lite</span>
-          <div class="mdl-layout-spacer"></div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search">
-              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+        <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+          <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Material Design Lite</span>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+              <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                <i class="material-icons">search</i>
+              </label>
+              <div class="mdl-textfield__expandable-holder">
+                <input class="mdl-textfield__input" type="text" id="search">
+                <label class="mdl-textfield__label" for="search">Enter your query...</label>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
       <div class="demo-ribbon"></div>
       <main class="demo-main mdl-layout__content">
         <div class="demo-container mdl-grid">
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
 
-            <h3>Progressive Web App Camera Demo</h3>
-              <p>
-                This is a basic Progressive Web App that contains a basic Service Worker and <code>Manifest.json.</code>.  
-              </p>
+          <h3>Progressive Web App Camera Demo</h3>
+            <p>
+              This is a basic Progressive Web App that contains a basic Service Worker and <code>Manifest.json.</code>.  
+            </p>
 
-              <p>
-                Clicking the button below will fire the Camera app.  You must give permission to the browser to access the Camera functionalities. (Will be prompted)
-              </p>
+            <p>
+              Clicking the button below will fire the Camera app.  You must give permission to the browser to access the Camera functionalities. (Will be prompted)
+            </p>
 
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center">Launch Camera</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center">Launch Camera</button>
 
           </div>
         </div>
-        <!--<footer class="demo-footer mdl-mini-footer">
-          <div class="mdl-mini-footer--left-section">
-            <ul class="mdl-mini-footer--link-list">
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Privacy and Terms</a></li>
-              <li><a href="#">User Agreement</a></li>
-            </ul>
-          </div>
-        </footer>-->
+      <!--<footer class="demo-footer mdl-mini-footer">
+      <div class="mdl-mini-footer--left-section">
+      <ul class="mdl-mini-footer--link-list">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy and Terms</a></li>
+        <li><a href="#">User Agreement</a></li>
+      </ul>
+      </div>
+      </footer>-->
       </main>
-    </div>
-      </main>
-    </div>
+      </div>
+    </main>
+  </div>
 
   <!-- Uncomment the line below when ready to test with fake data -->
   <script src="scripts/app.js" async></script>
