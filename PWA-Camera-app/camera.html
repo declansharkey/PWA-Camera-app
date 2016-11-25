@@ -1,0 +1,121 @@
+<!--
+ Copyright 2016 Google Inc.
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+      http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css">
+  <link rel="stylesheet" href="styles/inline.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Weather PWA">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  <link rel="stylesheet" href="styles/camera.css">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+</head>
+<body>
+
+ <!-- Uses a header that contracts as the page scrolls down. -->
+    <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--waterfall">
+        <!-- Top row, always visible -->
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Title</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="waterfall-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="waterfall-exp">
+            </div>
+          </div>
+        </div>
+        <!-- Bottom row, not visible on scroll -->
+        <div class="mdl-layout__header-row">
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Camera Quick Link</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Photobooth</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="container">
+
+            <div class="app">
+
+                <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>
+                <video muted id="camera-stream"></video>
+                <img id="snap">
+                <p id="error-message"></p>
+                <div class="controls">
+                    <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
+                    <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+                    <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">file_download</i></a>  
+                </div>
+                <!-- Hidden canvas element. Used for taking snapshot of video. -->
+                <canvas></canvas>
+
+            </div>
+
+        </div>
+
+
+<script>
+// Register Service Worker.
+if ('serviceWorker' in navigator) {
+    // Path is relative to the origin, not project root.
+    navigator.serviceWorker.register('/camera-app/sw.js')
+    .then(function(reg) {
+        console.log('Registration succeeded. Scope is ' + reg.scope);
+    })
+    .catch(function(error) {
+        console.error('Registration failed with ' + error);
+    });
+}
+</script>
+<script src="scripts/camera.js"></script> 
+      </main>
+    </div>
+
+  <!-- Uncomment the line below when ready to test with fake data -->
+  <script src="scripts/app.js" async></script>
+
+</body>
+</html>
