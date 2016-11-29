@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         delete_photo_btn = document.querySelector('#delete-photo'),
         download_photo_btn = document.querySelector('#download-photo'),
         error_message = document.querySelector('#error-message');
+        rotate_image = document.querySelector('#rotate-image');
 
 
     // The getUserMedia interface is used for handling camera input.
@@ -106,6 +107,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    delete_photo_btn.addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        // Hide image.
+        image.setAttribute('src', "");
+        image.classList.remove("visible");
+
+        // Disable delete and save buttons
+        delete_photo_btn.classList.add("disabled");
+        download_photo_btn.classList.add("disabled");
+
+        // Resume playback of stream.
+        video.play();
+
+    });
+
+    rotate_image.addEventListener("click", function(e) {
+
+        e.preventDefault();
+        mirrorImage();
+        
+    });
+
 
 
     function takeSnapshot() {
@@ -129,6 +154,20 @@ document.addEventListener('DOMContentLoaded', function () {
             // Turn the canvas image into a dataURL that can be used as a src for our photo.
             return hidden_canvas.toDataURL('image/png');
         }
+    }
+
+    //create a mirror image of the snap
+    function mirrorImage(){
+        var hidden_canvas = document.getElementById("canvas-snap");
+        var context = hidden_canvas.getContext("2d");
+
+        // flip context horizontally
+        context.scale(-1, 1);
+        console.log(context);
+
+        //check to see if the function is firing
+        console.log('Button clicked');
+        return hidden_canvas.toDataURL('image/png');
     }
 
 

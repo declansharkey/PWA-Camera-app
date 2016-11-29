@@ -139,12 +139,16 @@ h3{
     font-size: 18px;
 }
 
-.app .controls #take-photo i{
+.app .controls #take-photo i, .app .controls #rotate-image i{
     font-size: 32px;
 }
 
 .app canvas{
     display: none;
+}
+
+.flipped{
+    transform: rotateY(180deg);
 }
 
 .app video#camera-stream.visible,

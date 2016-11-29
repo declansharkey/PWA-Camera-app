@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css">
   <link rel="stylesheet" href="styles/inline.css">
   <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
 
   <!-- TODO add manifest here -->
   <link rel="manifest" href="/manifest.json">
@@ -87,30 +88,17 @@
                 <div class="controls">
                     <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
                     <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+                    <a href="#" id="rotate-image" title="Flip Image"><i class="material-icons">swap_horiz</i></a>
                     <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">file_download</i></a>  
                 </div>
                 <!-- Hidden canvas element. Used for taking snapshot of video. -->
-                <canvas></canvas>
+                <canvas width="578" height="200" id="canvas-snap"></canvas>
 
             </div>
 
         </div>
 
-
-<script>
-// Register Service Worker.
-if ('serviceWorker' in navigator) {
-    // Path is relative to the origin, not project root.
-    navigator.serviceWorker.register('/camera-app/sw.js')
-    .then(function(reg) {
-        console.log('Registration succeeded. Scope is ' + reg.scope);
-    })
-    .catch(function(error) {
-        console.error('Registration failed with ' + error);
-    });
-}
-</script>
-<script src="scripts/camera.js"></script> 
+        <script src="scripts/camera.js"></script> 
       </main>
     </div>
 
