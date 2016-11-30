@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
         rotate_image = document.querySelector('#rotate-image');
 
 
-    // The getUserMedia interface is used for handling camera input.
-    // Some browsers need a prefix so here we're covering all the options
+    // Using getUserMedia to handle access to camera
+    // Browser Prefixes
     navigator.getMedia = ( 
         navigator.getUserMedia ||
         navigator.webkitGetUserMedia ||
@@ -152,13 +152,13 @@ document.addEventListener('DOMContentLoaded', function () {
             context.drawImage(video, 0, 0, width, height);
 
             // Turn the canvas image into a dataURL that can be used as a src for our photo.
-            return hidden_canvas.toDataURL('image/png');
+
         }
     }
 
     //create a mirror image of the snap
     function mirrorImage(){
-        var hidden_canvas = document.getElementById("canvas-snap");
+        var hidden_canvas = document.querySelector("camera-stream");
         var context = hidden_canvas.getContext("2d");
 
         // flip context horizontally
@@ -167,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //check to see if the function is firing
         console.log('Button clicked');
-        return hidden_canvas.toDataURL('image/png');
     }
 
 
