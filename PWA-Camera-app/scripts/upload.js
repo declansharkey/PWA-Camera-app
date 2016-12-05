@@ -9,7 +9,8 @@ window.onload = function() {
                 //Only pics
                 // if(!file.type.match('image'))
                 if (file.type.match('image.*')) {
-                    if (this.files[0].size < 2097152) {
+                    //set an upload limit - Can be whatever
+                    if (this.files[0].size < 20971520) {
                         // continue;
                         var picReader = new FileReader();
                         picReader.addEventListener("load", function(event) {

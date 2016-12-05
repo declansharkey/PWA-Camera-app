@@ -24,7 +24,7 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Helvetica', 'Verdana', sans-serif;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 400;
     font-display: optional;
     color: #444;
@@ -38,26 +38,20 @@ html {
 
 body {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
     -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
     align-content: stretch;
     background: #ececec;
@@ -74,26 +68,20 @@ body {
     padding: 16px 16px 0 16px;
     will-change: transform;
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
     -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    -webkit-align-content: center;
     -ms-flex-line-pack: center;
     align-content: center;
     -webkit-transition: -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;
@@ -130,7 +118,6 @@ body {
     font-size: 20px;
     margin: 0;
     -webkit-box-flex: 1;
-    -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
 }
@@ -214,7 +201,6 @@ body {
 .main {
     padding-top: 60px;
     -webkit-box-flex: 1;
-    -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     overflow-x: hidden;
@@ -303,7 +289,6 @@ body {
 
 .weather-forecast .current {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
 }
@@ -315,7 +300,6 @@ body {
 
 .weather-forecast .current .visual {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     font-size: 4em;
@@ -329,7 +313,6 @@ body {
 .weather-forecast .current .visual,
 .weather-forecast .current .description {
     -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
 }
@@ -366,14 +349,12 @@ body {
 
 .weather-forecast .future {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
 }
 
 .weather-forecast .future .oneday {
     -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
     text-align: center;
@@ -551,6 +532,7 @@ body {
 .upload .image-container .thumbnail {
     position: relative;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: auto;
     height: auto;
@@ -566,8 +548,16 @@ body {
 
 .upload #result {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
 }
