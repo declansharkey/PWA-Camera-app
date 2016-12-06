@@ -20,7 +20,7 @@ window.onload = function() {
                             div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
                                 "title='preview image'/>";
                             output.insertBefore(div, null);
-                            
+
                             //remove an image from the list when you click/tap on it
                             $('.image-container').on("click", function() {
                                 $(this).remove();
