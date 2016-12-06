@@ -18,136 +18,154 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PWA</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css">
-  <link rel="stylesheet" href="styles/inline.css">
-  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css">
+    <link rel="stylesheet" href="styles/inline.css">
+    <link rel="stylesheet" href="styles/camera.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
 
-  <!-- TODO add manifest here -->
-  <link rel="manifest" href="/manifest.json">
-  <!-- Add to home screen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Weather PWA">
-  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="#2F3BA2">
+    <!-- TODO add manifest here -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 
 <body>
 
-  <!-- Uses a header that contracts as the page scrolls down. -->
-  <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--waterfall">
-      <!-- Top row, always visible -->
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">Title</span>
-        <div class="mdl-layout-spacer"></div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+    <!-- Uses a header that contracts as the page scrolls down. -->
+    <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--waterfall">
+            <!-- Top row, always visible -->
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Title</span>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                     mdl-textfield--floating-label mdl-textfield--align-right">
-          <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
               <i class="material-icons">search</i>
             </label>
-          <div class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
-          </div>
-        </div>
-      </div>
-      <!-- Bottom row, not visible on scroll -->
-      <div class="mdl-layout__header-row">
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation -->
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="camera.html">Camera Quick Link</a>
-        </nav>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Title</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Photobooth</a>
-      </nav>
-    </div>
-    <main class="mdl-layout__content">
-      <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-        <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
-          <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">Material Design Lite</span>
-            <div class="mdl-layout-spacer"></div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-              <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-                <i class="material-icons">search</i>
-              </label>
-              <div class="mdl-textfield__expandable-holder">
-                <input class="mdl-textfield__input" type="text" id="search">
-                <label class="mdl-textfield__label" for="search">Enter your query...</label>
-              </div>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+                    </div>
+                </div>
             </div>
-          </div>
+            <!-- Bottom row, not visible on scroll -->
+            <div class="mdl-layout__header-row">
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="camera.html">Camera Quick Link</a>
+                    <a href="#image-upload-panel"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center">image upload</button></a>
+                    <a href="#camera-panel-reveal"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center">Camera</button></a>
+                </nav>
+            </div>
         </header>
-        <div class="demo-ribbon"></div>
-        <main class="demo-main mdl-layout__content">
-          <div class="demo-container mdl-grid">
-            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-            <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Title</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Photobooth</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+                <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+                    <div class="mdl-layout__header-row">
+                        <span class="mdl-layout-title">Material Design Lite</span>
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="search"><i class="material-icons">search</i></label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="text" id="search">
+                                <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="demo-ribbon"></div>
+                <main class="demo-main mdl-layout__content">
+                    <div id="camera-panel" class="demo-container mdl-grid home-tile">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                        <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
 
-              <h3>Progressive Web App Camera Demo</h3>
-              <p>
-                This is a basic Progressive Web App that contains a basic Service Worker and <code>Manifest.json.</code>.
-              </p>
+                            <h3>Progressive Web App Camera Demo</h3>
+                            <p>
+                                This is a basic Progressive Web App that contains a basic Service Worker and <code>Manifest.json.</code>.
+                            </p>
 
-              <p>
-                Clicking the button below will fire the Camera app. You must give permission to the browser to access the Camera functionalities.
-                (Will be prompted)
-              </p>
+                            <p>
+                                Clicking the button below will fire the Camera app. You must give permission to the browser to access the Camera functionalities. (Will be prompted)
+                            </p>
 
-              <a href="camera.html"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center">Launch Camera</button></a>
+                            <a href="camera.html"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center">Launch Camera</button></a>
 
+                        </div>
+                    </div>
+
+                    <!--Second section: File upload-->
+                    <div id="image-upload-panel" class="demo-container mdl-grid panel">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                        <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
+                            <article class="upload">
+                                <h3>File Upload</h3>
+                                <label for="files">Select multiple files: </label>
+                                <input id="files" type="file" multiple/>
+                                <button type="button" id="clear" class="mdl-button mdl-js-button mdl-button--raised">Clear</button>
+                                <output id="result"></output>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!--Third section: Camera App-->
+                    <div id="camera-panel-reveal" class="demo-container mdl-grid panel">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                        <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
+                            <div class="container">
+                                <div class="app">
+                                    <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>
+                                    <video muted id="camera-stream"></video>
+                                    <img id="snap">
+                                    <p id="error-message"></p>
+                                    <div class="controls">
+                                        <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
+                                        <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+                                        <a href="#" id="rotate-image" title="Flip Image"><i class="material-icons">swap_horiz</i></a>
+                                        <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">file_download</i></a>
+                                    </div>
+                                    <!-- Hidden canvas element. Used for taking snapshot of video. -->
+                                    <canvas width="578" height="200" id="canvas-snap"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
             </div>
-          </div>
-
-        <!--Second section: File upload-->
-          <div class="demo-container mdl-grid">
-            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-            <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
-
-              <h3>File Upload</h3>
-              <p>
-                Upload Your files
-              </p>
-
-              <a href="upload.html"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center">Upload</button></a>
-
-            </div>
-          </div>
-          <!--<footer class="demo-footer mdl-mini-footer">
-      <div class="mdl-mini-footer--left-section">
-      <ul class="mdl-mini-footer--link-list">
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Privacy and Terms</a></li>
-        <li><a href="#">User Agreement</a></li>
-      </ul>
-      </div>
-      </footer>-->
         </main>
-      </div>
-    </main>
-  </div>
+    </div>
 
-  <!-- Uncomment the line below when ready to test with fake data -->
-  <script>
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker
-               .register('service-worker.js')
-               .then(function() { console.log("Service Worker Registered"); });
-    }
-  </script>
+    <!-- Uncomment the line below when ready to test with fake data -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('service-worker.js')
+                .then(function() {
+                    console.log("Service Worker Registered");
+                });
+        }
+    </script>
+    <script src="scripts/upload.js"></script>
+    <script src="scripts/camera.js"></script>
 
 </body>
 
