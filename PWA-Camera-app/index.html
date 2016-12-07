@@ -65,11 +65,7 @@
             <div class="mdl-layout__header-row">
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation -->
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="camera.html">Camera Quick Link</a>
-                    <a href="#image-upload-panel"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center">image upload</button></a>
-                    <a href="#camera-panel-reveal"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center">Camera</button></a>
-                </nav>
+                <nav class="mdl-navigation"></nav>
             </div>
         </header>
         <div class="mdl-layout__drawer">
@@ -99,16 +95,13 @@
                         <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
                         <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
 
-                            <h3>Progressive Web App Camera Demo</h3>
-                            <p>
-                                This is a basic Progressive Web App that contains a basic Service Worker and <code>Manifest.json.</code>.
-                            </p>
-
-                            <p>
-                                Clicking the button below will fire the Camera app. You must give permission to the browser to access the Camera functionalities. (Will be prompted)
-                            </p>
-
-                            <a href="camera.html"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center">Launch Camera</button></a>
+                            <h3>Quick Prints!</h3>
+                            <p>With this app, the goal is for the user to print photos quickly withough having to go through the full site</p>
+                            <p>Users can upload images via the camera or from their device</p>
+                            <div class="center">
+                                <a href="#image-upload-panel"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">image upload</button></a>
+                                <a href="#camera-panel-reveal"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">Camera</button></a>
+                            </div>
 
                         </div>
                     </div>
@@ -123,6 +116,7 @@
                                 <input id="files" type="file" multiple/>
                                 <button type="button" id="clear" class="mdl-button mdl-js-button mdl-button--raised">Clear</button>
                                 <output id="result"></output>
+                                <a href="#camera-panel-reveal"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">Continue</button></a>
                             </article>
                         </div>
                     </div>
@@ -140,7 +134,6 @@
                                     <div class="controls">
                                         <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
                                         <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
-                                        <a href="#" id="rotate-image" title="Flip Image"><i class="material-icons">swap_horiz</i></a>
                                         <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">file_download</i></a>
                                     </div>
                                     <!-- Hidden canvas element. Used for taking snapshot of video. -->
