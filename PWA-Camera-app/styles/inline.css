@@ -619,3 +619,13 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
+
+
+/*FOR DEMO*/
+
+#camera-panel-reveal div,
+#gps-panel div {
+    width: 100%;
+    top: 0;
+    margin: 0 auto;
+}
