@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
     // References to all the element we will need.
     var video = document.querySelector('#camera-stream'),
@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
         delete_photo_btn = document.querySelector('#delete-photo'),
         download_photo_btn = document.querySelector('#download-photo'),
         error_message = document.querySelector('#error-message');
-        rotate_image = document.querySelector('#rotate-image');
+    rotate_image = document.querySelector('#rotate-image');
 
 
     // Using getUserMedia to handle access to camera
     // Browser Prefixes
-    navigator.getMedia = ( 
+    navigator.getMedia = (
         navigator.getUserMedia ||
         navigator.webkitGetUserMedia ||
         navigator.mozGetUserMedia ||
@@ -22,13 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
 
-    if(!navigator.getMedia){
+    if (!navigator.getMedia) {
         displayErrorMessage("Your browser doesn't have support for the navigator.getUserMedia interface.");
-    }
-    else{
+    } else {
         // Request the camera.
-        navigator.getMedia(
-            {
+        navigator.getMedia({
                 video: true
             },
             // Success Callback
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 video.onplay = function() {
                     showVideo();
                 };
-         
+
             },
             // Error Callback
             function(err) {
@@ -124,13 +122,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    rotate_image.addEventListener("click", function(e) {
-
-        e.preventDefault();
-        mirrorImage();
-        
-    });
-
 
 
     function takeSnapshot() {
@@ -157,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     //create a mirror image of the snap
-    function mirrorImage(){
+    function mirrorImage() {
         var hidden_canvas = document.querySelector("camera-stream");
         var context = hidden_canvas.getContext("2d");
 
@@ -179,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function displayErrorMessage(error_msg, error) {
         error = error || "";
-        if(error){
+        if (error) {
             console.error(error);
         }
 
@@ -189,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
         error_message.classList.add("visible");
     }
 
-   
+
     function hideUI() {
         // Helper function for clearing the app UI.
 

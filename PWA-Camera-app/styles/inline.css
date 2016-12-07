@@ -611,3 +611,11 @@ body {
     right: 0;
     margin: auto;
 }
+
+
+/*GPS PAGE*/
+
+#gps-details {
+    margin-bottom: 20px;
+    text-align: center;
+}

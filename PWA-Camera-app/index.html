@@ -140,6 +140,30 @@
                                     <canvas width="578" height="200" id="canvas-snap"></canvas>
                                 </div>
                             </div>
+                            <a href="#gps-panel"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">Continue</button></a>
+
+                        </div>
+                    </div>
+
+                    <!--Fourth section: GPS Location-->
+                    <div id="gps-panel" class="demo-container mdl-grid panel">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                        <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
+                            <article class="upload">
+                                <h3>Your Current Location</h3>
+                                <div id="gps-details"></div>
+                                <div class="store-details">Based on these cordinates, your closest {{vendor}} is</div>
+                                <div class="closest-store">901 Seymour Street, Vancouver, BC V6B 3M1 #55</div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                    <input class="mdl-textfield__input" id="country" name="country" value="Choose Store" type="text" readonly tabIndex="-1" data-val="choose" />
+                                    <label class="mdl-textfield__label" for="country">Or choose from the following</label>
+                                    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
+                                        <li class="mdl-menu__item" data-val="SPLS">1322 West Broadway, Vancouver, BC V6H 1H2 #223</li>
+                                        <li class="mdl-menu__item" data-val="SPLS1">1055 West Georgia Street, Unit 220, Vancouver, BC V6E 3P3 #254</li>
+                                        <li class="mdl-menu__item" data-val="SPLS2">1999 Marine Drive, N. Vancouver, BC V7P 3J3 #56</li>
+                                    </ul>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </main>
@@ -156,9 +180,14 @@
                     console.log("Service Worker Registered");
                 });
         }
+
+        $(document).ready(function() {
+            geoFindMe();
+        });
     </script>
     <script src="scripts/upload.js"></script>
     <script src="scripts/camera.js"></script>
+    <script src="scripts/gps.js"></script>
 
 </body>
 
