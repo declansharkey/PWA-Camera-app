@@ -18,11 +18,11 @@ window.onload = function() {
                             var div = document.createElement("div");
                             div.className = 'image-container';
                             div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
-                                "title='preview image'/>";
+                                "title='preview image'/><i class='material-icons'>clear</i>";
                             output.insertBefore(div, null);
                             //remove an image from the list when you click/tap on it
-                            $('.image-container').on("click", function() {
-                                $(this).remove();
+                            $('.image-container i').on("click", function() {
+                                $(this).parent().remove();
                             });
                         });
                         //Read the image

@@ -527,6 +527,24 @@ body {
     margin: 10px;
     width: 140px;
     height: 140px;
+    position: relative;
+}
+
+.upload output#result .image-container i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.upload output#result .image-container:hover i {
+    opacity: 1;
+}
+
+.upload output#result .image-container i:hover {
+    display: block;
+    cursor: pointer;
 }
 
 .upload .image-container .thumbnail {
