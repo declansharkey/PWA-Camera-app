@@ -580,6 +580,12 @@ body {
     justify-content: flex-start;
 }
 
+.thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+}
+
 
 /*css page transitions*/
 
@@ -620,12 +626,26 @@ body {
     text-align: center;
 }
 
+.store-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.store-choice div {
+    flex-basis: 20%;
+    border: 1px solid black;
+    width: 320px !important;
+    margin: 10px 0 10px 0!important;
+    padding: 1%;
+}
+
 
 /*FOR DEMO*/
 
 #camera-panel-reveal div,
 #gps-panel div {
     width: 100%;
-    top: 0;
+    position: inherit;
     margin: 0 auto;
 }
