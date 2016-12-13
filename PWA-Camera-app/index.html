@@ -133,23 +133,30 @@
                                 <h3>Your Current Location</h3>
                                 <div id="gps-details"></div>
                                 <div class="store-details">Based on these cordinates, your closest {{vendor}} is</div>
-                                <div class="closest-store">901 Seymour Street, Vancouver, BC V6B 3M1 #55</div>
                                 <div class="store-choice">
-                                    <a href="#cart-panel">
+                                    <a class="selected">
+                                        <div class="default-store">
+                                            <p>#55 901 Seymour Street</p>
+                                            <p>Vancouver BC</p>
+                                            <p>BC V6B</p>
+                                        </div>
+                                    </a>
+                                    <div class="alternate-store">Or, you can choose one of the stores below;</div>
+                                    <a>
                                         <div class="store1">
                                             <p>#223 1322 West Broadway</p>
                                             <p>Vancouver BC</p>
                                             <p>V6H 1H2</p>
                                         </div>
                                     </a>
-                                    <a href="#cart-panel">
+                                    <a>
                                         <div class="store2">
                                             <p>##254 1055 West Georgia Street</p>
                                             <p>Vancouver BC</p>
                                             <p>VV6E 3P3</p>
                                         </div>
                                     </a>
-                                    <a href="#cart-panel">
+                                    <a>
                                         <div class="store3">
                                             <p>#56 1999 Marine Drive</p>
                                             <p>Vancouver BC</p>
@@ -191,9 +198,14 @@
 
             $(".cont-cart, .store-choice a").click(function() {
                 var imageQty = $('#result .image-container').length;
-                $("#cart-details").append("<div id='cart-details-qty'>You have " + imageQty + " images in your cart</div>");
+                $("#cart-details").append("<div id='cart-details-qty'>You have ordered " + imageQty + " images</div>");
                 console.log("Quantity has been registered");
             });
+
+            $(".store-choice a").on('click', function() {
+                $(".store-choice a").removeClass("selected");
+                $(this).addClass("selected");
+            })
 
 
         });
