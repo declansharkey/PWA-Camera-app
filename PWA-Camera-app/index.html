@@ -135,21 +135,27 @@
                                 <div class="store-details">Based on these cordinates, your closest {{vendor}} is</div>
                                 <div class="closest-store">901 Seymour Street, Vancouver, BC V6B 3M1 #55</div>
                                 <div class="store-choice">
-                                    <div class="store1">
-                                        <p>#223 1322 West Broadway</p>
-                                        <p>Vancouver BC</p>
-                                        <p>V6H 1H2</p>
-                                    </div>
-                                    <div class="store2">
-                                        <p>##254 1055 West Georgia Street</p>
-                                        <p>Vancouver BC</p>
-                                        <p>VV6E 3P3</p>
-                                    </div>
-                                    <div class="store3">
-                                        <p>#56 1999 Marine Drive</p>
-                                        <p>Vancouver BC</p>
-                                        <p>V7P 3J3</p>
-                                    </div>
+                                    <a href="#cart-panel">
+                                        <div class="store1">
+                                            <p>#223 1322 West Broadway</p>
+                                            <p>Vancouver BC</p>
+                                            <p>V6H 1H2</p>
+                                        </div>
+                                    </a>
+                                    <a href="#cart-panel">
+                                        <div class="store2">
+                                            <p>##254 1055 West Georgia Street</p>
+                                            <p>Vancouver BC</p>
+                                            <p>VV6E 3P3</p>
+                                        </div>
+                                    </a>
+                                    <a href="#cart-panel">
+                                        <div class="store3">
+                                            <p>#56 1999 Marine Drive</p>
+                                            <p>Vancouver BC</p>
+                                            <p>V7P 3J3</p>
+                                        </div>
+                                    </a>
                                 </div>
                                 <a href="#cart-panel"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent cont-cart ">Continue to cart</button></a>
                             </article>
@@ -183,7 +189,7 @@
         $(document).ready(function() {
             geoFindMe();
 
-            $(".cont-cart").click(function() {
+            $(".cont-cart, .store-choice a").click(function() {
                 var imageQty = $('#result .image-container').length;
                 $("#cart-details").append("<div id='cart-details-qty'>You have " + imageQty + " images in your cart</div>");
                 console.log("Quantity has been registered");

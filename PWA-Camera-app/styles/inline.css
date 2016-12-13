@@ -599,11 +599,11 @@ body {
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.6);
     opacity: 0;
     z-index: 2;
-    -webkit-transition: opacity .6s ease-in-out;
+    /*-webkit-transition: opacity .6s ease-in-out;
     -moz-transition: opacity .6s ease-in-out;
     -o-transition: opacity .6s ease-in-out;
     -ms-transition: opacity .6s ease-in-out;
-    transition: opacity .6s ease-in-out;
+    transition: opacity .6s ease-in-out;*/
 }
 
 .panel:target {
@@ -632,20 +632,41 @@ body {
     justify-content: space-between;
 }
 
-.store-choice div {
+.store-choice a {
     flex-basis: 20%;
     border: 1px solid black;
     width: 320px !important;
     margin: 10px 0 10px 0!important;
     padding: 1%;
+    display: block;
+    color: #424242;
+    text-decoration: none;
 }
 
 
 /*FOR DEMO*/
 
+#cart-panel div {
+    margin: 0 auto;
+}
+
 #camera-panel-reveal div,
 #gps-panel div {
-    width: 100%;
-    position: inherit;
+    width: 70%;
+    position: relative;
     margin: 0 auto;
+}
+
+#gps-panel div {
+    position: inherit!important;
+    left: 0;
+    right: 0;
+}
+
+div#cart-details div {
+    display: none;
+}
+
+div#cart-details div:first-child {
+    display: block;
 }
