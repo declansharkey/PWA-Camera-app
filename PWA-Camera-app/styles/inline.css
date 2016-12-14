@@ -659,7 +659,7 @@ body {
 
 /*FOR DEMO*/
 
-#cart-panel div {
+#cart-panel .demo-content {
     margin: 0 auto;
 }
 
@@ -676,10 +676,9 @@ body {
     right: 0;
 }
 
-div#cart-details div {
-    display: none;
-}
-
-div#cart-details div:last-child {
-    display: block;
+.your-store .selected div {
+    box-shadow: inset 0 0 0 1px #000;
+    width: 300px;
+    padding: 10px;
+    color: #000;
 }

@@ -105,7 +105,6 @@
 
                     <!--Third section: Camera App-->
                     <div id="camera-panel-reveal" class="demo-container mdl-grid panel">
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
                         <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
                             <div class="container">
                                 <div class="app">
@@ -174,7 +173,13 @@
                         <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
                             <article class="cart-container">
                                 <h3>Your Cart</h3>
-                                <div id="cart-details"></div>
+                                <div id="cart-details">
+                                    <div id="cart-details-qty"></div>
+                                </div>
+                                <div class="your-store">
+                                    <h2>Store pickup</h2>
+                                    <a></a>
+                                </div>
                             </article>
                         </div>
                     </div>
@@ -192,27 +197,11 @@
                     console.log("Service Worker Registered");
                 });
         }
-
-        $(document).ready(function() {
-            geoFindMe();
-
-            $(".cont-cart, .store-choice a").click(function() {
-                var imageQty = $('#result .image-container').length;
-                $("#cart-details").append("<div id='cart-details-qty'>You have ordered " + imageQty + " images</div>");
-                console.log("Quantity has been registered");
-            });
-
-            $(".store-choice a").on('click', function() {
-                $(".store-choice a").removeClass("selected");
-                $(this).addClass("selected");
-            })
-
-
-        });
     </script>
     <script src="scripts/upload.js"></script>
     <script src="scripts/camera.js"></script>
     <script src="scripts/gps.js"></script>
+    <script src="scripts/pwa.js"></script>
 
 </body>
 
