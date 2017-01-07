@@ -24,7 +24,7 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Helvetica", "Arial", sans-serif;
     font-weight: 400;
     font-display: optional;
     color: #444;
@@ -55,6 +55,36 @@ body {
     -ms-flex-line-pack: stretch;
     align-content: stretch;
     background: #ececec;
+}
+
+h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.25px;
+    color: #333333;
+}
+
+h2 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.25px;
+    color: #333333;
+}
+
+h3 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #333333;
 }
 
 .header {
@@ -278,171 +308,6 @@ body {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.weather-forecast .location {
-    font-size: 1.75em;
-}
-
-.weather-forecast .date,
-.weather-forecast .description {
-    font-size: 1.25em;
-}
-
-.weather-forecast .current {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.weather-forecast .current .icon {
-    width: 128px;
-    height: 128px;
-}
-
-.weather-forecast .current .visual {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 4em;
-}
-
-.weather-forecast .current .visual .scale {
-    font-size: 0.5em;
-    vertical-align: super;
-}
-
-.weather-forecast .current .visual,
-.weather-forecast .current .description {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-}
-
-.weather-forecast .current .sunset:before {
-    content: "Sunset: ";
-    color: #888;
-}
-
-.weather-forecast .current .wind:before {
-    content: "Wind: ";
-    color: #888;
-}
-
-.weather-forecast .current .sunrise:before {
-    content: "Sunrise: ";
-    color: #888;
-}
-
-.weather-forecast .current .humidity:before {
-    content: "Humidity: ";
-    color: #888;
-}
-
-.weather-forecast .current .pollen:before {
-    content: "Pollen Count: ";
-    color: #888;
-}
-
-.weather-forecast .current .pcount:before {
-    content: "Pollen ";
-    color: #888;
-}
-
-.weather-forecast .future {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.weather-forecast .future .oneday {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    text-align: center;
-}
-
-.weather-forecast .future .oneday .icon {
-    width: 64px;
-    height: 64px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.weather-forecast .future .oneday .temp-high,
-.weather-forecast .future .oneday .temp-low {
-    display: inline-block;
-}
-
-.weather-forecast .future .oneday .temp-low {
-    color: #888;
-}
-
-.weather-forecast .icon {
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.weather-forecast .icon.clear-day {
-    background-image: url("/images/clear.png");
-}
-
-.weather-forecast .icon.clear-night {
-    background-image: url("/images/clear.png");
-}
-
-.weather-forecast .icon.rain {
-    background-image: url("/images/rain.png");
-}
-
-.weather-forecast .icon.snow {
-    background-image: url("/images/snow.png");
-}
-
-.weather-forecast .icon.sleet {
-    background-image: url("/images/sleet.png");
-}
-
-.weather-forecast .icon.windy {
-    background-image: url("/images/wind.png");
-}
-
-.weather-forecast .icon.fog {
-    background-image: url("/images/fog.png");
-}
-
-.weather-forecast .icon.cloudy {
-    background-image: url("/images/cloudy.png");
-}
-
-.weather-forecast .icon.partly-cloudy-day {
-    background-image: url("/images/partly-cloudy.png");
-}
-
-.weather-forecast .icon.partly-cloudy-night {
-    background-image: url("/images/partly-cloudy.png");
-}
-
-.weather-forecast .icon.thunderstorms {
-    background-image: url("/images/thunderstorm.png");
-}
-
-@media (max-width: 450px) {
-    .weather-forecast .date,
-    .weather-forecast .description {
-        font-size: 0.9em;
-    }
-    .weather-forecast .current .icon {
-        width: 96px;
-        height: 96px;
-    }
-    .weather-forecast .current .visual {
-        font-size: 3em;
-    }
-    .weather-forecast .future .oneday .icon {
-        width: 32px;
-        height: 32px;
-    }
-}
-
 .mdl-button {
     background: transparent;
     border: none;
@@ -519,6 +384,18 @@ body {
     display: block;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
 
 /*File Upload*/
 
@@ -577,7 +454,7 @@ body {
     flex-wrap: wrap;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 20px;
 }
 
@@ -712,7 +589,96 @@ div#confirmation article {
 }
 
 
+/*COSTCO*/
+
+body main .mdl-color--grey-100 {
+    background-color: #ededed!important;
+}
+
+.costco-btn {
+    background: transparent;
+    border: none;
+    color: #FFF;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+    min-width: 50px;
+    padding: 16px 30px;
+    display: inline-block;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.white-text {
+    color: #FFF;
+}
+
+.normal-text {
+    color: #333;
+}
+
+.costco-primary {
+    background-color: #0060A8;
+}
+
+.costco-primary-white {
+    background-color: #FFF;
+}
+
+.costco-primary-orange {
+    background-color: #f69d38;
+}
+
+.costco-primary-green {
+    background-color: #197b30;
+}
+
+.costco-title {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0.25;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.logo-top {
+    display: inline-block;
+    height: 100%;
+}
+
+.logo-top img {
+    height: 100%;
+    width: auto;
+}
+
+
 /*Media Queries*/
+
+@media (max-width:1024px) {
+    .flexbox a {
+        display: inline-block;
+        width: 45%;
+    }
+    .flexbox a button {
+        width: 100%;
+    }
+    .logo-top {
+        margin: 0 auto;
+    }
+    .mdl-layout__header-row {
+        padding: 0;
+        width: 100%;
+    }
+}
 
 @media (max-width:480px) {
     #camera-panel-reveal div,

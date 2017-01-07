@@ -1,5 +1,3 @@
-
-
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -16,39 +14,31 @@
     -webkit-font-smoothing: antialiased;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     background-color: #fff;
-    font:normal 16px/1.5 sans-serif;
+    font: normal 16px/1.5 sans-serif;
     color: #333;
 }
 
-h3{
-    font-size: 32px;
-    color: #2c3e50;
-    margin: 50px 0;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.container{
+.container {
     max-width: 1000px;
     margin: 50px auto;
     padding: 20px;
     background-color: #efefef;
 }
 
-.app{
+.app {
     width: 100%;
     position: relative;
 }
 
-.app #start-camera{
+.app #start-camera {
     display: none;
     border-radius: 3px;
     max-width: 400px;
@@ -61,12 +51,12 @@ h3{
     text-align: center;
 }
 
-.app video#camera-stream{
+.app video#camera-stream {
     display: none;
     width: 100%;
 }
 
-.app img#snap{
+.app img#snap {
     position: absolute;
     top: 0;
     left: 0;
@@ -75,7 +65,7 @@ h3{
     display: none;
 }
 
-.app #error-message{
+.app #error-message {
     width: 100%;
     background-color: #ccc;
     color: #9b9b9b;
@@ -85,14 +75,13 @@ h3{
     display: none;
 }
 
-.app .controls{
+.app .controls {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 20;
-
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: flex-end;
@@ -103,7 +92,7 @@ h3{
     display: none;
 }
 
-.app .controls a{
+.app .controls a {
     border-radius: 50%;
     color: #fff;
     background-color: #111;
@@ -115,85 +104,76 @@ h3{
     -webkit-tap-highlight-color: transparent;
 }
 
-.app .controls a:hover{
+.app .controls a:hover {
     opacity: 1;
 }
 
-.app .controls a.disabled{
+.app .controls a.disabled {
     background-color: #555;
     opacity: 0.5;
     cursor: default;
     pointer-events: none;
 }
 
-.app .controls a.disabled:hover{
+.app .controls a.disabled:hover {
     opacity: 0.5;
 }
 
-.app .controls a i{
+.app .controls a i {
     font-size: 18px;
 }
 
-.app .controls #take-photo i, .app .controls #rotate-image i{
+.app .controls #take-photo i,
+.app .controls #rotate-image i {
     font-size: 32px;
 }
 
-.app canvas{
+.app canvas {
     display: none;
 }
 
-.flipped{
+.flipped {
     transform: rotateY(180deg);
 }
 
 .app video#camera-stream.visible,
 .app img#snap.visible,
-.app #error-message.visible
-{
+.app #error-message.visible {
     display: block;
 }
 
-.app .controls.visible{
+.app .controls.visible {
     display: -webkit-flex;
     display: flex;
 }
 
-
-
-@media(max-width: 1000px){
-    .container{
+@media(max-width: 1000px) {
+    .container {
         margin: 40px;
     }
-
-    .app #start-camera.visible{
+    .app #start-camera.visible {
         display: block;
     }
-
-    .app .controls a i{
+    .app .controls a i {
         font-size: 16px;
     }
-
-    .app .controls #take-photo i{
+    .app .controls #take-photo i {
         font-size: 24px;
     }
 }
 
-
-@media(max-width: 600px){
-    .container{
+@media(max-width: 600px) {
+    .container {
         margin: 10px;
     }
-
-    .app #error-message{
+    .app #error-message {
         padding: 80px 50px;
         font-size: 18px;
     }
-
-    .app .controls a i{
+    .app .controls a i {
         font-size: 12px;
     }
-
-    .app .controls #take-photo i{
+    .app .controls #take-photo i {
         font-size: 18px;
     }
 }

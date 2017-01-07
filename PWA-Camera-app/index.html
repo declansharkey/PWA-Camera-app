@@ -29,27 +29,12 @@
 
     <!-- Uses a header that contracts as the page scrolls down. -->
     <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
-        <header class="mdl-layout__header mdl-layout__header--waterfall">
+        <header class="costco-primary">
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">Menu</span>
-                <div class="mdl-layout-spacer"></div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                    mdl-textfield--floating-label mdl-textfield--align-right">
-                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
-              <i class="material-icons">search</i>
-            </label>
-                    <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
-                    </div>
-                </div>
-            </div>
-            <!-- Bottom row, not visible on scroll -->
-            <div class="mdl-layout__header-row">
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
-                <nav class="mdl-navigation"></nav>
+                <a class="logo-top" href="#camera-panel"><img src="images/logo.png"></img>
+                </a>
             </div>
         </header>
         <div class="mdl-layout__drawer">
@@ -60,30 +45,18 @@
         </div>
         <main class="mdl-layout__content">
             <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-                <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
-                    <div class="mdl-layout__header-row">
-                        <span class="mdl-layout-title">Quick Prints</span>
-                        <div class="mdl-layout-spacer"></div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                            <label class="mdl-button mdl-js-button mdl-button--icon" for="search"><i class="material-icons">search</i></label>
-                            <div class="mdl-textfield__expandable-holder">
-                                <input class="mdl-textfield__input" type="text" id="search">
-                                <label class="mdl-textfield__label" for="search">Enter your query...</label>
-                            </div>
-                        </div>
-                    </div>
-                </header>
+
                 <div class="demo-ribbon"></div>
                 <main class="demo-main mdl-layout__content">
                     <div id="camera-panel" class="demo-container mdl-grid home-tile">
                         <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
                         <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
-                            <h3>Quick Prints!</h3>
+                            <h3 class="text-center">Quick Prints!</h3>
                             <p>With this app, the goal is for the user to print photos quickly withough having to go through the full site</p>
                             <p>Users can upload images via the camera or from their device</p>
-                            <div class="center">
-                                <a href="#image-upload-panel"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">image upload</button></a>
-                                <a href="#camera-panel-reveal"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">Camera</button></a>
+                            <div class="flexbox">
+                                <a href="#image-upload-panel"><button class="costco-btn costco-primary ">upload</button></a>
+                                <a href="#camera-panel-reveal"><button class="costco-btn costco-primary ">Camera</button></a>
                             </div>
                         </div>
                     </div>
@@ -98,7 +71,7 @@
                                 <input id="files" type="file" multiple/>
                                 <button type="button" id="clear" class="mdl-button mdl-js-button mdl-button--raised">Clear</button>
                                 <output id="result"></output>
-                                <a href="#gps-panel"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">Continue</button></a>
+                                <a href="#gps-panel"><button class="costco-btn costco-primary ">Continue</button></a>
                             </article>
                         </div>
                     </div>
@@ -121,7 +94,7 @@
                                     <canvas width="578" height="200" id="canvas-snap"></canvas>
                                 </div>
                             </div>
-                            <a href="#gps-panel"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">Continue</button></a>
+                            <a href="#gps-panel"><button class="costco-btn costco-primary ">Continue</button></a>
                         </div>
                     </div>
 
@@ -163,7 +136,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <a href="#cart-panel"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent cont-cart ">Continue to cart</button></a>
+                                <a href="#cart-panel"><button class="costco-btn costco-primary cont-cart ">Continue to cart</button></a>
                             </article>
                         </div>
                     </div>
@@ -260,7 +233,7 @@
                                 </form>
 
                                 <a href="http://127.0.0.1:8887/#confirmation">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent ">Pay Now</button>
+                                    <button class="costco-btn costco-primary ">Pay Now</button>
                                 </a>
                             </article>
                         </div>
