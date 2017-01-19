@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWA</title>
+    <title>Costco - Quick Prints</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css">
     <link rel="stylesheet" href="styles/inline.css">
@@ -49,8 +49,7 @@
                 <div class="demo-ribbon"></div>
                 <main class="demo-main mdl-layout__content">
                     <div id="camera-panel" class="demo-container mdl-grid home-tile">
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-                        <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
+                        <div class="center demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
                             <h3 class="text-center">Quick Prints!</h3>
                             <p>With this app, the goal is for the user to print photos quickly withough having to go through the full site</p>
                             <p>Users can upload images via the camera or from their device</p>
@@ -63,15 +62,14 @@
 
                     <!--Second section: File upload-->
                     <div id="image-upload-panel" class="demo-container mdl-grid panel">
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-                        <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
+                        <div class="center demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
                             <article class="upload">
                                 <h3>File Upload</h3>
                                 <label for="files">Select multiple files: </label>
                                 <input id="files" type="file" multiple/>
                                 <button type="button" id="clear" class="mdl-button mdl-js-button mdl-button--raised">Clear</button>
                                 <output id="result"></output>
-                                <a href="#gps-panel"><button class="costco-btn costco-primary ">Continue</button></a>
+                                <a href="#gps-panel" class="center text-center"><button class="costco-btn costco-primary ">Continue</button></a>
                             </article>
                         </div>
                     </div>
@@ -94,7 +92,7 @@
                                     <canvas width="578" height="200" id="canvas-snap"></canvas>
                                 </div>
                             </div>
-                            <a href="#gps-panel"><button class="costco-btn costco-primary ">Continue</button></a>
+                            <a href="#gps-panel" class="center text-center"><button class="costco-btn costco-primary ">Continue</button></a>
                         </div>
                     </div>
 
@@ -136,7 +134,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <a href="#cart-panel"><button class="costco-btn costco-primary cont-cart ">Continue to cart</button></a>
+                                <a href="#cart-panel" class="center text-center"><button class="costco-btn costco-primary cont-cart ">Continue to cart</button></a>
                             </article>
                         </div>
                     </div>
@@ -227,25 +225,22 @@
                                             <span class="mdl-checkbox__label">Save Card</span>
                                         </label>
 
-
-
                                     </fieldset>
                                 </form>
 
-                                <a href="http://127.0.0.1:8887/#confirmation">
+                                <a href="#confirmation" class="center text-center">
                                     <button class="costco-btn costco-primary ">Pay Now</button>
                                 </a>
                             </article>
                         </div>
                     </div>
 
-
                     <!--Sixth section: Confirmation Page-->
                     <div id="confirmation" class="demo-container mdl-grid panel">
                         <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
                             <article class="upload">
                                 <h3>Order Complete</h3>
-                                <div class="order-intro">You order Number is:</div>
+                                <div class="order-intro">Your order number is:</div>
                                 <script>
                                     function randomString(length, chars) {
                                         var result = '';
@@ -257,8 +252,6 @@
                             </article>
                         </div>
                     </div>
-
-
                 </main>
             </div>
         </main>

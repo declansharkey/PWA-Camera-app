@@ -26,7 +26,6 @@ body {
     width: 100%;
     font-family: "Helvetica", "Arial", sans-serif;
     font-weight: 400;
-    font-display: optional;
     color: #444;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -57,34 +56,35 @@ body {
     background: #ececec;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
     font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 32px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    letter-spacing: 0.25px;
     color: #333333;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 0.25px;
 }
 
 h2 {
-    font-family: "Helvetica", "Arial", sans-serif;
     font-size: 28px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
     letter-spacing: 0.25px;
-    color: #333333;
 }
 
 h3 {
-    font-family: "Helvetica", "Arial", sans-serif;
     font-size: 26px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
     letter-spacing: 0px;
-    color: #333333;
+}
+
+h4 {
+    font-size: 22px;
+    letter-spacing: 0px;
 }
 
 .header {
@@ -468,6 +468,11 @@ button#clear {
     margin-top: 20px;
 }
 
+#image-upload-panel {
+    height: auto;
+    min-height: 100%;
+}
+
 
 /*css page transitions*/
 
@@ -537,7 +542,7 @@ button#clear {
 }
 
 .selected {
-    box-shadow: inset 0 0 0 2px #00bcff!important;
+    box-shadow: inset 0 0 0 2px #007bda!important;
 }
 
 
@@ -677,6 +682,11 @@ body main .mdl-color--grey-100 {
     .mdl-layout__header-row {
         padding: 0;
         width: 100%;
+    }
+    .upload #result {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
 
