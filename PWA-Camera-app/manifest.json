@@ -1,12 +1,14 @@
 {
     "short_name": "Declan's App",
     "name": "Web Application Manifest",
+    "theme_color": "#0060A8",
     "icons": [{
         "src": "../app-icon.png",
-        "sizes": "180x180",
+        "sizes": "36x36",
         "type": "image/png",
-        "density": 1
+        "density": 0.75
     }],
+    "background_color": "#fff",
     "start_url": "index.html",
     "display": "standalone",
     "orientation": "portrait"
