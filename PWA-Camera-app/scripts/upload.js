@@ -24,6 +24,15 @@ window.onload = function() {
                             $('.image-container i').on("click", function() {
                                 $(this).parent().remove();
                             });
+
+
+                            var img = $('.image-container');
+
+                            $(img, this).click(function() {
+                                console.log("image clicked");
+                                var modal = $('#myModal');
+                                $(modal).css("display", "block")
+                            });
                         });
                         //Read the image
                         $('#clear, #result').show();
